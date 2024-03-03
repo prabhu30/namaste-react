@@ -5,6 +5,21 @@ const headingElement = React.createElement(
     { class: "heading" }, 
     "Hello from React JS!!!"
 );
+
+const parent = React.createElement(
+    "div",
+    { class: "parent" },
+    [ 
+        React.createElement("ul", { class: "unordered-list" }, [ 
+            React.createElement("li", {}, "Namaste React by Akshay Saini"),
+            React.createElement("li", {}, "Chai aur React by Hitesh Choudhary") 
+        ]),
+        React.createElement("ol", { class: "ordered-list" }, [
+            React.createElement("li", {}, "I love Web Development"),
+            React.createElement("li", {}, "I want to be healthy")
+        ])
+    ]
+)
         
 const root = ReactDOM.createRoot(rootContainer);
-root.render(headingElement);
+root.render(parent);
