@@ -1,0 +1,22 @@
+{
+  "name": "first-project",
+  "version": "1.0.0",
+  "description": "First Project of course Namaste React by Akshay Saini",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prabhu30/namaste-react.git"
+  },
+  "author": "Prabhu Kalyan Korivi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prabhu30/namaste-react/issues"
+  },
+  "homepage": "https://github.com/prabhu30/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
