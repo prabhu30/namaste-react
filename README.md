@@ -2,45 +2,75 @@
 
 - Course Link - [Namaste React by Akshay Saini](https://namastedev.com/learn/namaste-react/)
 
-### Version v0.1
+## Setting up a **React** project from Scratch
 
-- Before adding NPM to the project - [commit link](https://github.com/prabhu30/namaste-react/tree/57273544a25a1d1c1230154d696c83cb335e1da4)
+- Create a folder <- project-name ->
+- Open command prompt inside that folder
 
-### Version v1.1
+  ```
+  cd project
+  ```
 
--
+- Create `index.html` file and write this below code in the body
 
-# Parcel 📦
+  ```
+  <div class="root"></div>
 
-- 🌟 Awesome Reference Article - [Link](https://www.digitalocean.com/community/tutorials/how-to-bundle-a-web-app-with-parcel-js) 🌟
-- Official Documentation - [parceljs.org](https://parceljs.org/)
+  <script type="module" src="main.js">
+  ```
 
-- It is an open-source bundler, which is used to bundle a web app
+- To initialize packaging, execute `npm init`
+- Install a bundler as dev dependency, for example :-
 
-* In-built tools of Parcel are,
-  - Bundling
-  - Differential Bundling
-  - Build Application (makes it production-ready)
-  - Development Server
-  - Hot Reloading
-  - File Watching Algorithm (written in C++)
-  - Caching for Faster Builds
-  - Diagnostics
-  - Minification
-  - Image compression
-  - Consistent Hashing
-  - Code Splitting
+  ```
+  npm install -D parcel
+  ```
 
-- To install parcel bundler, use command
+- Install react and react-dom dependencies
 
-  - `npm install --save-dev parcel`
+  ```
+  npm i react
+  npm i react-dom
+  ```
 
-- To create a development build (if one doesn't exist) and immediately start the development server, run the below command inside your project directory
+- Write some React and JSX code in your main script, for example in `main.js` write,
 
-  - `npx parcel src/index.html`
+  ```
+  import ReactDOM from 'react-dom/client';
 
-- To generate production build of your application, run the below command inside your project directory (this doesn't start any server, as the command is build)
+  const root = ReactDOM.createRoot(document.querySelector('.root'));
 
-  - `npx parcel build index.html`
+  const Heading = function () {
+      return (
+          <h1>Hey, Welcome to Tech Zone! 🚀</h1>
+      )
+  }
 
--
+  root.render(<Heading />);
+  ```
+
+- Now, let parcel handler the execution. Run this command - `npx parcel index.html`
+
+- In order to simplify running / spinning up development server, replace this line from `package.json` -
+
+  ```
+  "main": "index.js"
+  ```
+
+  with this
+
+  ```
+  "source": "src/index.html"
+  ```
+
+- In `scripts` object of `package.json`, write this -
+
+  ```
+  "start": "parcel",
+  "build": "parcel build",
+  ```
+
+- From next time, when you want to start the development server, use `npm start`
+- If you want to generate a production build, use `npm build`
+
+- That's it, you are good to go!!! Write some amazing react code, and kickstart the server 🚀
