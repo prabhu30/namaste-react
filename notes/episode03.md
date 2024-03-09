@@ -23,3 +23,32 @@
   - Function component (Used in 99.99% of the codebases)
   - Class component (only used in legacy code)
 - React **Functional** Component is a Javascript function which returns markup, i.e., which returns JSX, i.e., which returns React element.
+- Example of function component -
+
+  ```
+    function MyApp() {
+        return (
+            <h1>Hello React!</h1>
+        );
+    }
+  ```
+
+- A component can be used / called in other components in multiple ways
+  - Mostly used syntax
+  ```
+    <LoginComponent>
+  ```
+  - Alternative Syntax 01
+  ```
+    <LoginComponent></LoginComponent>
+  ```
+  - Alternative Syntax 02
+  ```
+    { LoginComponent() }    ==> JavaScript inside JSX (accepted)
+  ```
+
+## Power of JSX (Blocking XSS)
+
+- If you are obtaining data from an external API, and then rendering the data onto the page, JSX doesn't blindly render the data
+- If the incoming data from API is malicious, JSX does prior processing on the data and if it's malicious data, it won't render the data onto the page
+-
