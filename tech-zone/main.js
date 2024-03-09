@@ -41,16 +41,18 @@ const Search = function () {
     )
 }
 
-const LaptopCard = function () {
+const LaptopCard = function (props) {
+    const { name, price, specs, productImage, productLink } = props;
+
     return (
         <div className='laptop-card'>
-            <img src="https://m.media-amazon.com/images/I/31ihwk6okoL._AC_SR480,480_.jpg" alt="Image of Laptop" className='laptop-image' />
+            <img src={productImage} alt="Image of Laptop" className='laptop-image' />
             <div className='laptop-name-price'>
-                <p className='laptop-name'>HP Laptop 15s</p>
-                <p className='laptop-price'>₹ 96,248</p>
+                <p className='laptop-name'>{name}</p>
+                <p className='laptop-price'>{price}</p>
             </div>
-            <p className='laptop-specs'><b>Specs :-</b> i5, 12th Gen, 16 GB RAM, 512 GB SSD</p>
-            <a href='https://amzn.eu/d/j0iAPrj' target='_blank' className='laptop-buy-button'>View and Buy</a>
+            <p className='laptop-specs'><b>Specs :-</b> {specs}</p>
+            <a href={productLink} target='_blank' className='laptop-buy-button'>View and Buy</a>
         </div>
     )
 }
@@ -58,14 +60,11 @@ const LaptopCard = function () {
 const LaptopsContainer = function () {
     return (
         <div className='laptops-container'>
-            <LaptopCard />
-            <LaptopCard />
-            <LaptopCard />
-            <LaptopCard />
-            <LaptopCard />
-            <LaptopCard />
-            <LaptopCard />
-            <LaptopCard />
+            <LaptopCard name="HP Laptop 15s" price="₹ 96,248" specs="i5, 12th Gen, 16 GB RAM, 512 GB SSD" productImage="https://m.media-amazon.com/images/I/71t3PXu3lNL._AC_UY327_FMwebp_QL65_.jpg" productLink="https://amzn.eu/d/j0iAPrj" />
+
+            <LaptopCard name="Lenovo Ideapad 3" price="₹ 33,990" specs="i3, 11th Gen, 8 GB RAM, 512 GB SSD" productImage="https://m.media-amazon.com/images/I/61jyqpkeJQL._SX679_.jpg" productLink="https://amzn.eu/d/0vGBh6M" />
+
+            <LaptopCard name="MacBook Air M1" price="₹ 74,990" specs="i5, 12th Gen, 8 GB RAM, 256 GB SSD" productImage="https://m.media-amazon.com/images/I/71TPda7cwUL._SX679_.jpg" productLink="https://amzn.eu/d/jl7maoK" />
         </div>
     )
 }
