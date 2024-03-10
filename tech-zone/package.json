@@ -4,7 +4,7 @@
   "description": "A One-stop solution for Tech Products and Information",
   "source": "index.html",
   "scripts": {
-    "start": "parcel",
+    "start": "parcel index.html",
     "build": "parcel build",
     "test": "jest"
   },

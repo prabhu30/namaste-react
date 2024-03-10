@@ -7,6 +7,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+body {
+    padding-bottom: 100px;
+}
+
 /* Navbar styles */
 .navbar {
     width: 95%;
