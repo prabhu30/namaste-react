@@ -108,7 +108,7 @@ body {
     transition: 0.3s linear;
 }
 
-/* Search Box Styles */
+/* Search Box & Sort Button Styles */
 .search {
     margin-top: 2rem;
     display: flex;
@@ -136,6 +136,23 @@ body {
     outline: none;
 }
 
+.sort-by-price {
+    font-weight: bold;
+    background-color: #ffe2b3;
+    margin-left: 10px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 1px 1px 1px 1px #888;
+    cursor: pointer;
+}
+
+.sort-by-price:hover {
+    background-color: #ffca75;
+    transition: 0.2s ease-in-out;
+}
+
 /* Laptops Container Styles */
 .laptops-container {
     width: 90%;
@@ -148,7 +165,7 @@ body {
 }
 
 .laptop-card {
-    width: 200px;
+    width: 210px;
     background-color: #f0f0f0;
     padding: 0.5rem;
     margin-right: 1.5rem;

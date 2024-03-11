@@ -4,7 +4,7 @@ import LaptopsContainer from './LaptopsContainer';
 const Content = function () {
     return (
         <>
-            <Search />
+            {/* <Search /> */}
             <LaptopsContainer />
         </>
     )

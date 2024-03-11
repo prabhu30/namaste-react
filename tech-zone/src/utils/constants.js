@@ -4,7 +4,7 @@ export let laptops = [
     {
         id: 1,
         name: 'HP Laptop 15s',
-        price: '96,248',
+        price: '53790',
         processor: 'i5',
         generation: 12,
         ram: 16,
@@ -15,7 +15,7 @@ export let laptops = [
     {
         id: 2,
         name: 'Lenovo Ideapad 3',
-        price: '33,990',
+        price: '33990',
         processor: 'i3',
         generation: 11,
         ram: 8,
@@ -26,12 +26,23 @@ export let laptops = [
     {
         id: 3,
         name: 'MacBook Air M1',
-        price: '74,990',
+        price: '74990',
         processor: 'i5',
         generation: 12,
         ram: 8,
         ssd: 256,
         image: 'https://m.media-amazon.com/images/I/71TPda7cwUL._SX679_.jpg',
         link: 'https://amzn.eu/d/jl7maoK'
+    },
+    {
+        id: 4,
+        name: 'Lenovo Ideapad Slim 3',
+        price: '54990',
+        processor: 'i5',
+        generation: 12,
+        ram: 16,
+        ssd: 512,
+        image: 'https://m.media-amazon.com/images/I/71HzM0aj+9L._SX679_.jpg',
+        link: 'https://amzn.eu/d/8NyvJll'
     }
 ]
