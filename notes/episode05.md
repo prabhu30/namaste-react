@@ -40,13 +40,17 @@
 
 - Virtual DOM is a representation of the Actual DOM
 - It is nothing but a kind of javascript object
+- Whatever updates we do to our react components are not directly rendered onto the Actual DOM. Instead, those changes are made only in the Virtual DOM
 
 ## Diffing Algorithm
 
--
+- **Diffing :** When you made a change to some component, React compares the difference between the previous virtual DOM (which is currently present on the browser), with the current virtual DOM, which hasn't been rendered onto browser yet.
+- Only that component which has been changed, will be re-rendered, instead of the whole page
+- This process is called **`diffing`** and algorithm used for it is called **`diffing algorithm`**
 
 ## Reconciliation Algorithm (React Fiber)
 
 - This has been introduced in React 16
 - This algorithm is used to update the DOM whenever something changes
 - Reconciliation is React's way of diffing / comparing the virtual DOM tree with the updated virtual DOM to determine the most efficient way to update the real DOM
+- When a component(node) state or prop changes, React decides whether it should render the changes on Real DOM or not. So, if the states/props of two nodes/components are not the same, then it renders the changes to real DOM. This process is called **`Reconciliation`**.
