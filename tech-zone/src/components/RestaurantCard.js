@@ -1,7 +1,7 @@
 import { RESTAURANT_IMAGE, RESTAURANT_URL_PREFIX } from '../utils/constants';
 
 const RestaurantCard = function ({ data }) {
-    let { id, name, locality, areaName, avgRating, deliveryTime, cuisines, cloudinaryImageId } = data;
+    let { id, name, locality, areaName, avgRating, sla, cuisines, cloudinaryImageId } = data;
 
     const imageUrl = RESTAURANT_IMAGE + cloudinaryImageId;
 
@@ -23,7 +23,7 @@ const RestaurantCard = function ({ data }) {
                 <div className='rating-and-delivery-time'>
                     <i className="fa-solid fa-star" style={{ 'color': '#42a98f' }}></i>
                     <div className='rating'>{avgRating}</div> |
-                    <div className='delivery-time'>{deliveryTime} mins</div>
+                    <div className='delivery-time'>{sla.deliveryTime} mins</div>
                 </div>
                 <p className='cuisines'>{cuisines}</p>
                 <p className='restaurant-area'>{restaurantArea}</p>

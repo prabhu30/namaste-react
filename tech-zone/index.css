@@ -153,8 +153,16 @@ body {
     transition: 0.2s ease-in-out;
 }
 
+/* Shimmer UI Styles */
+.shimmer-card {
+    width: 200px;
+    height: 135px;
+    border-radius: 1rem;
+    background-color: #f0f0f0;
+}
+
 /* Restaurants Container Styles */
-.restaurants-container {
+.restaurants-container, .shimmer-cards-container {
     width: 90%;
     max-width: 1080px;
     margin: 2rem auto 0;

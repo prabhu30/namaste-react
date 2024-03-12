@@ -1,4 +1,5 @@
 import RestaurantCard from './RestaurantCard';
+import Shimmer from './Shimmer';
 import { restaurants, SWIGGY_API_RESPONSE } from '../utils/constants';
 import { useEffect, useState } from 'react';
 
@@ -17,8 +18,8 @@ const RestaurantsContainer = function () {
     async function fetchRestaurants() {
         const data = await fetch(SWIGGY_API_RESPONSE);
         const response = await data.json();
-        restaurantsListResponse = response.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
-        restaurantsListNew = restaurantsListResponse.map(restaurant => {
+        let restaurantsListResponse = response.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+        let restaurantsListNew = restaurantsListResponse.map(restaurant => {
             return restaurant.info;
         });
         console.log(restaurantsListNew);
@@ -29,6 +30,10 @@ const RestaurantsContainer = function () {
     useEffect(() => {
         fetchRestaurants();
     })
+
+    if (restaurantsList.length === 0) {
+        return <Shimmer />;
+    }
 
     return (
         <>
