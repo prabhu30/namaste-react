@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -83,7 +83,7 @@ body {
 }
 
 .header-text {
-    color: white;
+    color: #2A2A72;
     text-align: center;
     margin-top: 160px;
     font-size: 1.5rem;
@@ -153,65 +153,64 @@ body {
     transition: 0.2s ease-in-out;
 }
 
-/* Laptops Container Styles */
-.laptops-container {
+/* Restaurants Container Styles */
+.restaurants-container {
     width: 90%;
     max-width: 1080px;
     margin: 2rem auto 0;
     display: flex;
     justify-content: space-evenly;
-    gap: 1.5rem 0;
+    gap: 1.75rem 1.3rem;
     flex-wrap: wrap;
 }
 
-.laptop-card {
-    width: 210px;
-    background-color: #f0f0f0;
-    padding: 0.5rem;
-    margin-right: 1.5rem;
-    border-radius: 0.5rem;
+.restaurant-card {
     cursor: pointer;
+    /* color: #000;
+    text-decoration: none; */
 }
 
-.laptop-image {
-    width: 100%;
-    height: 150px;
-    border-radius: 0.5rem;
+.restaurant-details {
+    padding-left: 0.75rem;
 }
 
-.laptop-name-price {
-    font-size: 0.85rem;
+.restaurant-image {
+    height: 135px;
+    width: 200px;
+    border-radius: 1rem;
+}
+
+.restaurant-name {
+    font-size: 1rem;
     font-weight: bold;
-    padding: 0 5px;
-    margin-top: 10px;
+    padding-top: 0.25rem;
+}
+
+.rating-and-delivery-time {
+    font-weight: bold;
+    padding-top: 0.125rem;
     display: flex;
-    justify-content: space-between;
+    gap: 0.5rem;
 }
 
-.laptop-name {
-    width: 80px;
+.rating-and-delivery-time i {
+    margin-top: 0.168rem;
 }
 
-.laptop-specs {
-    padding: 0 5px;
-    margin-top: 20px;
-    font-size: 0.75rem;
+.cuisines, .restaurant-area {
+    font-size: small;
+    font-weight: 200;
+    color: rgba(2, 6, 12, 0.6);
+    margin-top: 3px;
 }
 
-.laptop-buy-button {
-    font-size: 0.85rem;
-    text-decoration: none;
-    display: inline-block;
-    background-color: rgb(255, 190, 71);
-    margin: 1rem 1.85rem 0.75rem;
-    padding: 0.25rem 1rem;
-    border-radius: 0.25rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
+.restaurant-name, .cuisines, .restaurant-area {
+    width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 
-.laptop-buy-button:active, .laptop-buy-button:visited {
-    color: #000;
-    text-decoration: none;
+.restaurant-area {
+    margin-top: 0px;
 }

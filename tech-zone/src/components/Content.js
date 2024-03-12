@@ -1,11 +1,11 @@
 import Search from './Search';
-import LaptopsContainer from './LaptopsContainer';
+import RestaurantsContainer from './RestaurantsContainer';
 
 const Content = function () {
     return (
         <>
             {/* <Search /> */}
-            <LaptopsContainer />
+            <RestaurantsContainer />
         </>
     )
 }

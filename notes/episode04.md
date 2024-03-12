@@ -18,8 +18,8 @@
   ```
   <div>
       {
-        Laptops.map((laptop) => (
-            <Laptop key={laptop.id} />
+        Restaurants.map((restaurant) => (
+            <Restaurant key={restaurant.id} />
         ))
       }
   </div>

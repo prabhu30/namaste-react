@@ -1,48 +1,50 @@
 export const NAVBAR_LOGO_URL = 'https://cdn.dribbble.com/users/9853924/screenshots/19234500/media/2de3ef20f56373dc1baef595866aff42.jpg';
 
-export let laptops = [
+export const RESTAURANT_IMAGE = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+
+export const RESTAURANT_URL_PREFIX = "https://www.swiggy.com/restaurants/";
+
+export const SWIGGY_API_RESPONSE = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=16.50330&lng=80.64650&page_type=DESKTOP_WEB_LISTING";
+
+export let restaurants = [
     {
-        id: 1,
-        name: 'HP Laptop 15s',
-        price: '53790',
-        processor: 'i5',
-        generation: 12,
-        ram: 16,
-        ssd: 512,
-        image: 'https://m.media-amazon.com/images/I/71t3PXu3lNL._AC_UY327_FMwebp_QL65_.jpg',
-        link: 'https://amzn.eu/d/j0iAPrj'
+        id: 695744,
+        name: 'Bengaluru Bhavan',
+        locality: 'Pinnamaneni Poly Clinic Road',
+        areaName: 'Benz Circle And Auto Nagar',
+        avgRating: 4.5,
+        deliveryTime: 20,
+        cuisines: ["South Indian", "Biryani", "Chinese"],
+        cloudinaryImageId: "6bfb48bb2346de77aeded4f829465ac3",
     },
     {
-        id: 2,
-        name: 'Lenovo Ideapad 3',
-        price: '33990',
-        processor: 'i3',
-        generation: 11,
-        ram: 8,
-        ssd: 512,
-        image: 'https://m.media-amazon.com/images/I/61jyqpkeJQL._SX679_.jpg',
-        link: 'https://amzn.eu/d/0vGBh6M'
+        id: 333112,
+        name: 'Southern Spice Nasta',
+        locality: "Teacher's Colony",
+        areaName: 'Gurunanak Colony',
+        avgRating: 4.4,
+        deliveryTime: 21,
+        cuisines: ["South Indian"],
+        cloudinaryImageId: "iqs5kabeglgd2lxvnwty",
     },
     {
-        id: 3,
-        name: 'MacBook Air M1',
-        price: '74990',
-        processor: 'i5',
-        generation: 12,
-        ram: 8,
-        ssd: 256,
-        image: 'https://m.media-amazon.com/images/I/71TPda7cwUL._SX679_.jpg',
-        link: 'https://amzn.eu/d/jl7maoK'
+        id: 236572,
+        name: 'Srinivasa Fast Foods',
+        locality: 'Teachers Colony',
+        areaName: 'Labbipet',
+        avgRating: 4.3,
+        deliveryTime: 19,
+        cuisines: ["South Indian", "Chinese"],
+        cloudinaryImageId: "uxh321ykb0tqkexpgcgr",
     },
     {
-        id: 4,
-        name: 'Lenovo Ideapad Slim 3',
-        price: '54990',
-        processor: 'i5',
-        generation: 12,
-        ram: 16,
-        ssd: 512,
-        image: 'https://m.media-amazon.com/images/I/71HzM0aj+9L._SX679_.jpg',
-        link: 'https://amzn.eu/d/8NyvJll'
+        id: 70486,
+        name: 'SSS Idly Center',
+        locality: 'Municipal Employees Colony',
+        areaName: 'Acharya Ranga Nagar',
+        avgRating: 4.6,
+        deliveryTime: 15,
+        cuisines: ["South Indian"],
+        cloudinaryImageId: "weufsah9zwqtyvmfecw1",
     }
 ]

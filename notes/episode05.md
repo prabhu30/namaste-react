@@ -17,9 +17,9 @@
 
   ```
   export const LOGO_URL;
-  export let LaptopsList;
+  export let RestaurantsList;
 
-  import { LOGO_URL, LaptopsList } from './utils/constants.js';
+  import { LOGO_URL, RestaurantsList } from './utils/constants.js';
   ```
 
 ## React Hooks 🚀

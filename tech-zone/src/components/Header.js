@@ -5,8 +5,9 @@ const Header = function () {
         <div className='header'>
             <Navbar />
             <div className='header-text'>
-                <p>Welcome to the one-stop solution to find best laptops of all price ranges</p>
-                <button>Get Started</button>
+                <p>Welcome to the FoodZone</p>
+                <p>One-Stop Hub to find best restaurants with wide range of cuisines</p>
+                <button>Explore Food</button>
             </div>
         </div>
     )

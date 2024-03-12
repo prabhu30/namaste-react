@@ -4,8 +4,8 @@ const Navbar = function () {
     return (
         <div className='navbar'>
             <div className='logo-container'>
-                <img className='logo' src={NAVBAR_LOGO_URL} alt="Image of various tech gadgets on a table" />
-                <p>TechZone</p>
+                <img className='logo' src={NAVBAR_LOGO_URL} alt="Website Logo" />
+                <p>FoodZone</p>
             </div>
             <div className='nav-links'>
                 <ul>
