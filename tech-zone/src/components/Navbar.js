@@ -25,9 +25,9 @@ const Navbar = function () {
             </div>
             <div className='nav-links'>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Cart</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/cart">Cart</a></li>
                     <button className="login-logout-btn" onClick={() => updateText()}>{btnText}</button>
                 </ul>
             </div>

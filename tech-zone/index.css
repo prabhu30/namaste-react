@@ -55,12 +55,16 @@ body {
 }
 
 .nav-links ul li {
-    color: #000;
-    font-weight: bold;
     list-style-type: none;
     padding: 0.5rem 0.75rem;
     border-radius: 0.625rem;
     cursor: pointer;
+}
+
+.nav-links ul li a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .nav-links ul li:last-child {
