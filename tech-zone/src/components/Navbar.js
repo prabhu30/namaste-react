@@ -1,6 +1,21 @@
+import { useState } from "react";
 import { NAVBAR_LOGO_URL } from "../utils/constants";
 
+const loginLogoutBtn = document.querySelector('.login-logout-btn');
+
 const Navbar = function () {
+    const [btnText, setBtnText] = useState("Sign In");
+
+    function updateText() {
+        if (btnText === "Sign In") {
+            setBtnText("Sign Out");
+            loginLogoutBtn.classList.add('logout-btn');
+        } else {
+            setBtnText("Sign In");
+            loginLogoutBtn.classList.remove('logout-btn');
+        }
+    }
+
     return (
         <div className='navbar'>
             <div className='logo-container'>
@@ -12,6 +27,7 @@ const Navbar = function () {
                     <li>Home</li>
                     <li>About</li>
                     <li>Cart</li>
+                    <button className="login-logout-btn" onClick={() => updateText()}>{btnText}</button>
                 </ul>
             </div>
         </div>

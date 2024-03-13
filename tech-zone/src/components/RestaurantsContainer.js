@@ -4,7 +4,14 @@ import { restaurants, SWIGGY_API_RESPONSE } from '../utils/constants';
 import { useEffect, useState } from 'react';
 
 const RestaurantsContainer = function () {
-    let [restaurantsList, setRestaurantsList] = useState([]);
+    const [restaurantsList, setRestaurantsList] = useState([]);
+    const [searchText, setSearchText] = useState("");
+
+    console.log("component re-rendered");
+
+    function searchRestaurants(value) {
+        setSearchText(value);
+    }
 
     function sortByRatingDescending() {
         let sortedRestaurantsList = [...restaurantsList].sort((restaurant1, restaurant2) => {
@@ -22,25 +29,22 @@ const RestaurantsContainer = function () {
         let restaurantsListNew = restaurantsListResponse.map(restaurant => {
             return restaurant.info;
         });
-        console.log(restaurantsListNew);
 
         setRestaurantsList(restaurantsListNew);
     }
 
+    // Use Effect Hook
     useEffect(() => {
         fetchRestaurants();
     })
 
-    if (restaurantsList.length === 0) {
-        return <Shimmer />;
-    }
-
-    return (
+    // Conditional Rendering
+    return restaurantsList.length === 0 ? <Shimmer /> : (
         <>
             <div className='search'>
                 <input type="text" placeholder='Search Restaurants' className='search-input' />
-                <button className='search-icon'><i className="fa-solid fa-magnifying-glass"></i></button>
-                <button className='sort-by-price' onClick={() => sortByRatingDescending()}>Sort by Rating</button>
+                <button className='search-icon' onChange={(e) => searchRestaurants(e.target.value)}><i className="fa-solid fa-magnifying-glass"></i></button>
+                <button className='sort-by-rating' onClick={() => sortByRatingDescending()}>Sort by Rating</button>
             </div>
             <div className='restaurants-container'>
                 {

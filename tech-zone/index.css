@@ -51,7 +51,7 @@ body {
 
 .nav-links ul {
     display: flex;
-    gap: 75px;
+    gap: 50px;
 }
 
 .nav-links ul li {
@@ -71,6 +71,30 @@ body {
     color: #000;
     background-color: #b4e7ff;
     transition: 0.3s linear;
+}
+
+.login-logout-btn {
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 75px;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    background-color: #6464ff;
+    border-radius: 20px !important;
+    cursor: pointer;
+}
+
+.login-logout-btn:hover{
+    color: #000 !important;
+    background-color: #fff !important;
+}
+
+.logout-btn {
+    color: #000 !important;
+    background-color: #fff !important;
 }
 
 /* Header styles */
@@ -110,36 +134,41 @@ body {
 
 /* Search Box & Sort Button Styles */
 .search {
-    margin-top: 2rem;
+    margin: 2rem 0 3rem 0;
     display: flex;
     justify-content: center;
 }
 
 .search-input {
     width: 300px;
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 1rem;
     border: 0.1rem solid #888;
+    border-top: none;
+    border-left: none;
     border-right: none;
     outline: none;
-    border-radius: 0.45rem 0 0 0.45rem;
+    margin-left: 200px;
+    /* border-radius: 0.45rem 0 0 0.45rem; */
 }
 
 .search-icon {
     width: 50px;
-    color: #fff;
-    background-color: rgb(48, 181, 48);
-    padding: 0.75rem 1rem;
-    border: 0.1rem solid #666;
-    border-radius: 0 0.45rem 0.45rem 0;
+    color: #000;
+    /* background-color: rgb(48, 181, 48); */
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    /* border: 0.1rem solid #666;
+    border-radius: 0 0.45rem 0.45rem 0; */
+    border: none;
     cursor: pointer;
     border-left: none;
     outline: none;
 }
 
-.sort-by-price {
+.sort-by-rating {
     font-weight: bold;
     background-color: #ffe2b3;
-    margin-left: 10px;
+    margin-left: 50px;
     padding: 0 14px;
     border: none;
     border-radius: 10px;
@@ -148,7 +177,7 @@ body {
     cursor: pointer;
 }
 
-.sort-by-price:hover {
+.sort-by-rating:hover {
     background-color: #ffca75;
     transition: 0.2s ease-in-out;
 }
@@ -173,6 +202,8 @@ body {
 }
 
 .restaurant-card {
+    color: #000;
+    text-decoration: none;
     cursor: pointer;
     /* color: #000;
     text-decoration: none; */

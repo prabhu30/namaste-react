@@ -16,7 +16,7 @@ const RestaurantCard = function ({ data }) {
     const restaurantLink = `${RESTAURANT_URL_PREFIX}${name}-${locality}-${areaName}-${id}`;
 
     return (
-        <div href={restaurantLink} className='restaurant-card'>
+        <a href={restaurantLink} target="_blank" className='restaurant-card'>
             <img src={imageUrl} alt="Image of Food" className='restaurant-image' />
             <div className='restaurant-details'>
                 <p className='restaurant-name'>{restaurantName}</p>
@@ -28,7 +28,7 @@ const RestaurantCard = function ({ data }) {
                 <p className='cuisines'>{cuisines}</p>
                 <p className='restaurant-area'>{restaurantArea}</p>
             </div>
-        </div>
+        </a>
     )
 }
 
