@@ -1,5 +1,6 @@
 ## React Router 🚀
 
+- Official Documentation - [React Router](https://reactrouter.com/)
 - React Router is a standard library for routing in React. It enables the **navigation among views of various components** in a React Application
 - In order to get started, install `react-router-dom` package using the below command
   ```
