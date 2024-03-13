@@ -9,10 +9,11 @@ const Navbar = function () {
     function updateText() {
         if (btnText === "Sign In") {
             setBtnText("Sign Out");
-            loginLogoutBtn.classList.add('logout-btn');
+            // WARNING - This classList isn't working - to be understood why
+            // loginLogoutBtn.classList.add('logout-btn');
         } else {
             setBtnText("Sign In");
-            loginLogoutBtn.classList.remove('logout-btn');
+            // loginLogoutBtn.classList.remove('logout-btn');
         }
     }
 
