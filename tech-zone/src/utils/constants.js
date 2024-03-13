@@ -4,7 +4,7 @@ export const RESTAURANT_IMAGE = "https://media-assets.swiggy.com/swiggy/image/up
 
 export const RESTAURANT_URL_PREFIX = "https://www.swiggy.com/restaurants/";
 
-export const SWIGGY_API_RESPONSE = "https://proxy.cors.sh/https://www.swiggy.com/dapi/restaurants/list/v5?lat=16.50330&lng=80.64650&page_type=DESKTOP_WEB_LISTING";
+export const SWIGGY_API_RESPONSE = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=16.50330&lng=80.64650&page_type=DESKTOP_WEB_LISTING";
 
 export let restaurants = [
     {

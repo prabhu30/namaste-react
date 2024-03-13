@@ -4,7 +4,6 @@ import { restaurants, SWIGGY_API_RESPONSE } from '../utils/constants';
 import { useEffect, useState } from 'react';
 
 const RestaurantsContainer = function () {
-    console.log("component re-rendered");
 
     const [restaurantsList, setRestaurantsList] = useState([]);
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
@@ -28,9 +27,14 @@ const RestaurantsContainer = function () {
     }
 
     // Use Effect Hook
+    /**
+     * This will be called only once, as empty array is passed as dependency array / second argument to the hook
+     */
     useEffect(() => {
+        console.log("use effect hook called");
         fetchRestaurants();
     }, []);
+
 
     const fetchRestaurants = async () => {
         const data = await fetch(SWIGGY_API_RESPONSE);
@@ -47,7 +51,9 @@ const RestaurantsContainer = function () {
     // Use Effect Hook
     /**
      * WARNING - Placing the use Effect hook below the fetch restaurants function (in this place) has caused continous rendering issue - to be understood why
-     */
+    */
+
+    console.log("rendering restaurants container component");
 
     // Conditional Rendering
     return restaurantsList.length === 0 ? <Shimmer /> : (
