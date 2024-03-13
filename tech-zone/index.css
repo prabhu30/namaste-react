@@ -257,3 +257,28 @@ body {
 .restaurant-area {
     margin-top: 0px;
 }
+
+/* cart Page Styles */
+.cart-page h1 {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.cart-page i {
+    font-size: 2.25rem;
+    cursor: pointer;
+}
+
+/* Error Page Styles */
+.error-details-container, .about-page, .cart-page {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.error-details-container h1, .about-page h1, .cart-page h1 {
+    margin-bottom: 1rem;
+}
+
+.error-details-container .status-code {
+    margin-bottom: 1rem;
+}

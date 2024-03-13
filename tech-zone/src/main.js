@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Content from './components/Content';
 import About from './components/About';
 import Cart from './components/Cart';
+import Error from './components/Error';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -21,7 +22,8 @@ const Main = function () {
 const routes = createBrowserRouter([
     {
         path: '/',
-        element: <Main />
+        element: <Main />,
+        errorElement: <Error />
     },
     {
         path: '/about',
