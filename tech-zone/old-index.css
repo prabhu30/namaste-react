@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    padding-bottom: 100px;
+    background-color: #f8f8f8;
+}
+
+/* Navbar styles */
+.navbar {
+    width: 95%;
+    border: 2px solid #999;
+    border-radius: 0.75rem;
+    margin: 0 1rem;
+    padding: 1rem;
+
+    backdrop-filter: blur(5px);
+    
+    position: fixed;
+    top: 20;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.logo-container p {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.logo-container:hover {
+    cursor: pointer;
+}
+
+.logo {
+    width: 50px;
+    border-radius: 0.75rem;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 50px;
+}
+
+.nav-links ul li {
+    list-style-type: none;
+    border-radius: 0.625rem;
+    cursor: pointer;
+}
+
+.nav-links ul li a {
+    color: #000;
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links ul li:last-child {
+    margin-right: 75px;
+}
+
+
+.nav-links ul li:hover {
+    color: #000;
+    background-color: #b4e7ff;
+    transition: 0.3s linear;
+}
+
+.nav-links ul li:first-child {
+    font-size:1.5rem;
+}
+
+.nav-links ul li:first-child:hover {
+    background-color: transparent;
+}
+
+.login-logout-btn {
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 75px;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    background-color: #6464ff;
+    border-radius: 20px !important;
+    cursor: pointer;
+}
+
+.login-logout-btn:hover{
+    color: #fff !important;
+    background-color: #000 !important;
+}
+
+.logout-btn {
+    color: #000 !important;
+    background-color: #fff !important;
+}
+
+/* Header styles */
+.header {
+    height: 400px;
+    padding: 1rem;
+    background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+}
+
+.header-text {
+    color: #2A2A72;
+    text-align: center;
+    margin-top: 160px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
+.header-text a {
+    display: inline-block;
+    font-size: 0.875rem;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #b4e7ff;
+    margin-top: 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+}
+
+.header-text a:hover {
+    color: #fff;
+    background-color: rgb(0, 116, 0);
+    transition: 0.3s linear;
+}
+
+/* Search Box & Sort Button Styles */
+.search {
+    margin: 2rem 0 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    width: 300px;
+    padding: 0.25rem 1rem;
+    border: 0.1rem solid #888;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    margin-left: 200px;
+    /* border-radius: 0.45rem 0 0 0.45rem; */
+}
+
+.search-icon {
+    width: 50px;
+    color: #000;
+    /* background-color: rgb(48, 181, 48); */
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    /* border: 0.1rem solid #666;
+    border-radius: 0 0.45rem 0.45rem 0; */
+    border: none;
+    cursor: pointer;
+    border-left: none;
+    outline: none;
+}
+
+.sort-by-rating {
+    font-weight: bold;
+    background-color: #ffe2b3;
+    margin-left: 50px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 1px 1px 1px 1px #888;
+    cursor: pointer;
+}
+
+.sort-by-rating:hover {
+    background-color: #ffca75;
+    transition: 0.2s ease-in-out;
+}
+
+/* Shimmer UI Styles */
+.shimmer-card {
+    width: 200px;
+    height: 135px;
+    border-radius: 1rem;
+    background-color: #f0f0f0;
+}
+
+/* Restaurants Container Styles */
+.restaurants-container, .shimmer-cards-container {
+    width: 90%;
+    max-width: 1080px;
+    margin: 2rem auto 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.75rem 1.3rem;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.restaurant-card {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 0 5px 0;
+}
+
+.restaurant-card:hover {
+    border-radius: 1rem;
+    background-color: #d3d3d3;
+}
+
+.restaurant-details {
+    padding-left: 0.75rem;
+}
+
+.restaurant-image {
+    height: 135px;
+    width: 200px;
+    border-radius: 1rem;
+}
+
+.restaurant-name {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 0.25rem;
+}
+
+.rating-and-delivery-time {
+    font-weight: bold;
+    padding-top: 0.125rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.rating-and-delivery-time i {
+    margin-top: 0.168rem;
+}
+
+.cuisines, .restaurant-area {
+    font-size: small;
+    font-weight: 200;
+    color: rgba(2, 6, 12, 0.6);
+    margin-top: 3px;
+}
+
+.restaurant-name, .cuisines, .restaurant-area {
+    width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.restaurant-area {
+    margin-top: 0px;
+}
+
+/* cart Page Styles */
+.cart-page h1 {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.cart-page i {
+    font-size: 2.25rem;
+    cursor: pointer;
+}
+
+/* Error Page Styles */
+.error-details-container, .about-page, .cart-page {
+    text-align: center;
+    
+}
+
+.error-details-container, .about-page, .cart-page, .grocery-page {
+    margin-top: 150px;
+}
+
+.error-details-container h1, .about-page h1, .cart-page h1 {
+    margin-bottom: 1rem;
+}
+
+.error-details-container .status-code {
+    margin-bottom: 1rem;
+}
+
+/* Restaurant Menu */
+.restaurant-page {
+    background-color: #f8f8f8;
+    padding-bottom: 300px;
+}
+
+.restaurant-menu { 
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding-top: 2rem;
+}
+
+.restaurant-menu .bread-crumb {
+    font-size: 10px;
+    color: #777;
+}
+
+.restaurant-menu .bread-crumb span {
+    color: #000;
+}
+
+.restaurant-menu .res-header {
+    padding: 2rem 0.5rem 1rem;
+}
+
+.restaurant-menu .res-name {
+    color: #5757fa;
+    font-size: 18px;
+}
+
+.restaurant-menu .res-cuisines, .restaurant-menu .res-areaName {
+    color: #555;
+    font-size: 12px;
+    padding-top: 4px;
+}
+
+.restaurant-menu .res-distance-delivery-msg {
+    margin-top: 1rem;
+    color: #555;
+    font-size: 14px;
+}
+
+.restaurant-menu .res-distance-delivery-msg i {
+    margin-right: 5px;
+}
+
+.res-header {
+    border-bottom: 1px solid #cdcdcd;
+    border-bottom-style: dashed;
+}
+
+.res-header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.res-header-top-right {
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ceced1;
+    box-shadow: 0 1px 5px #f9f9f9;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.res-header-top-right .res-rating {
+    color: #3d9b6d;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #ceced1;
+}
+
+.res-header-top-right .ratings-string {
+    color: #777;
+    font-size: 10px;
+}
+
+.res-header-top-right p {
+    padding: 5px 0;
+}
+
+.res-delivery-time-cost {
+    padding: 1rem 0.5rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.res-delivery-time-cost p {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.res-delivery-time-cost p i {
+    margin-right: 5px;
+}
+
+/* Recommended Items */
+.categoryHeading {
+    width: 90%;
+    color: #5757fa;
+    max-width: 700px;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    margin: 1rem auto;
+    padding: 0 0.5rem 1rem;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.item {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1.5rem 0.5rem;
+    border-bottom: 1px solid #cdcdcd;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-details {
+    max-width: 70%;
+}
+.item-name {
+    font-size: 1rem;
+}
+
+.item-price {
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.item-description {
+    padding-top: 1rem;
+    color: #838383;
+    font-size: 12px;
+}
+
+.item-image {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.item-image img {
+    width: 120px;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.item-image button {
+    width: 80%;
+    font-weight: bold;
+    margin: 10px auto;
+    padding: 6px 10px;
+    border: 1px solid #ceced1;
+    border-radius: 5px;
+    outline: none;
+    color: #3d9b6d;
+    background-color: white;
+    cursor: pointer;
+}

@@ -1,4 +1,4 @@
-export const NAVBAR_LOGO_URL = 'https://cdn.dribbble.com/users/9853924/screenshots/19234500/media/2de3ef20f56373dc1baef595866aff42.jpg';
+export const NAVBAR_LOGO_URL = 'https://c4.wallpaperflare.com/wallpaper/869/719/717/cuisine-food-india-indian-wallpaper-preview.jpg';
 
 export const RESTAURANT_IMAGE = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 

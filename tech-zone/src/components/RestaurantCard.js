@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { RESTAURANT_IMAGE, RESTAURANT_URL_PREFIX } from '../utils/constants';
 
 const RestaurantCard = function ({ data }) {
@@ -13,22 +14,24 @@ const RestaurantCard = function ({ data }) {
 
     cuisines = cuisines.join(', ');
 
-    const restaurantLink = `${RESTAURANT_URL_PREFIX}${name}-${locality}-${areaName}-${id}`;
+    // const restaurantLink = `${RESTAURANT_URL_PREFIX}${name}-${locality}-${areaName}-${id}`;
+    const restaurantLink = `/restaurant/${id}`
+    // console.log(restaurantLink);
 
     return (
-        <a href={restaurantLink} target="_blank" className='restaurant-card'>
-            <img src={imageUrl} alt="Image of Food" className='restaurant-image' />
-            <div className='restaurant-details'>
-                <p className='restaurant-name'>{restaurantName}</p>
-                <div className='rating-and-delivery-time'>
+        <div className='w-56 mx-4 mb-8 shadow-2xl rounded-2xl'>
+            <img src={imageUrl} alt="Image of Food" className='restaurant-image h-40 w-56 rounded-tl-2xl rounded-tr-2xl' />
+            <div className='restaurant-details px-3 bg-slate-200 rounded-bl-2xl rounded-br-2xl hover:bg-orange-100'>
+                <p className='restaurant-name w-48 pt-3 pb-1 font-bold text-ellipsis whitespace-nowrap overflow-hidden'>{restaurantName}</p>
+                <div className='rating-and-delivery-time flex items-center gap-1 pb-2'>
                     <i className="fa-solid fa-star" style={{ 'color': '#42a98f' }}></i>
                     <div className='rating'>{avgRating}</div> |
                     <div className='delivery-time'>{sla.deliveryTime} mins</div>
                 </div>
-                <p className='cuisines'>{cuisines}</p>
-                <p className='restaurant-area'>{restaurantArea}</p>
+                <p className='cuisines text-sm italic text-ellipsis whitespace-nowrap overflow-hidden pb-1'>{cuisines}</p>
+                <p className='restaurant-area text-sm italic pb-5'>{restaurantArea}</p>
             </div>
-        </a>
+        </div>
     )
 }
 

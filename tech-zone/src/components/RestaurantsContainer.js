@@ -2,6 +2,8 @@ import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
 import { restaurants, SWIGGY_API_RESPONSE } from '../utils/constants';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import useOnlineStatus from '../utils/useOnlineStatus';
 
 const RestaurantsContainer = function () {
 
@@ -58,15 +60,20 @@ const RestaurantsContainer = function () {
     // Conditional Rendering
     return restaurantsList.length === 0 ? <Shimmer /> : (
         <>
-            <div className='search'>
-                <input type="text" placeholder='Search Restaurants' className='search-input' onChange={(e) => searchRestaurants(e.target.value)} />
-                <button className='search-icon'><i className="fa-solid fa-magnifying-glass"></i></button>
-                <button className='sort-by-rating' onClick={() => sortByRatingDescending()}>Sort by Rating</button>
+            <div id='search' className='search bg-gray-100 flex justify-center items-center py-8'>
+                <div className='mr-8'>
+                    <input type="text" placeholder='Search Restaurants' className='search-input bg-white px-4 py-1 mr-0 text-black outline-none border border-b-slate-800' onChange={(e) => searchRestaurants(e.target.value)} />
+                    <button className='search-icon px-2 py-1 ml-0 bg-blue-300 border border-b-blue-300'><i className="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <button className='sort-by-rating py-1 bg-orange-300 hover:bg-green-300 px-4 rounded-full' onClick={() => sortByRatingDescending()}>Sort by Rating</button>
+
             </div>
-            <div className='restaurants-container'>
+            <div className='restaurants-container bg-gray-100 pb-12 flex justify-evenly flex-wrap'>
                 {
                     filteredRestaurants.map((restaurant, index) => (
-                        <RestaurantCard key={restaurant.id} data={restaurant} />
+                        <Link key={restaurant.id} to={"/restaurant/" + restaurant?.id} className='restaurant-card'>
+                            < RestaurantCard key={restaurant.id} data={restaurant} />
+                        </Link>
                     ))
                 }
             </div>
