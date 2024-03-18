@@ -1,4 +1,4 @@
-import RestaurantCard from './RestaurantCard';
+import RestaurantCard, { CostPerTwo } from './RestaurantCard';
 import Shimmer from './Shimmer';
 import { restaurants, SWIGGY_API_RESPONSE } from '../utils/constants';
 import { useEffect, useState } from 'react';
@@ -10,6 +10,7 @@ const RestaurantsContainer = function () {
     const [restaurantsList, setRestaurantsList] = useState([]);
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
     const [searchText, setSearchText] = useState("");
+
 
     function searchRestaurants(value) {
         let restaurantsFilteredByText = restaurantsList.filter(restaurant => {
@@ -55,6 +56,8 @@ const RestaurantsContainer = function () {
      * WARNING - Placing the use Effect hook below the fetch restaurants function (in this place) has caused continous rendering issue - to be understood why
     */
 
+    const CostPerTwoCard = CostPerTwo(RestaurantCard);
+
     console.log("rendering restaurants container component");
 
     // Conditional Rendering
@@ -72,7 +75,8 @@ const RestaurantsContainer = function () {
                 {
                     filteredRestaurants.map((restaurant, index) => (
                         <Link key={restaurant.id} to={"/restaurant/" + restaurant?.id} className='restaurant-card'>
-                            < RestaurantCard key={restaurant.id} data={restaurant} />
+                            {/* <RestaurantCard key={restaurant.id} data={restaurant} /> */}
+                            <CostPerTwoCard key={restaurant.id} data={restaurant} />
                         </Link>
                     ))
                 }

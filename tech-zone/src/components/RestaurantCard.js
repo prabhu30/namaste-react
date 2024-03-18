@@ -35,4 +35,16 @@ const RestaurantCard = function ({ data }) {
     )
 }
 
+export function CostPerTwo(RestaurantCard) {
+    return (props) => {
+        console.log(props);
+        return (
+            <div>
+                <label className='absolute bg-green-500 text-white font-bold italic border border-slate-500 ml-2 mt-5 px-2'>{props.data.costForTwo}</label>
+                <RestaurantCard {...props} />
+            </div>
+        )
+    }
+}
+
 export default RestaurantCard;
