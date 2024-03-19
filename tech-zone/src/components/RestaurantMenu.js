@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
 import Dish from "./Dish";
+import CategoryAccordion from "./CategoryAccordion";
 
 export default function RestaurantMenu() {
 
@@ -11,6 +12,7 @@ export default function RestaurantMenu() {
   const [restaurantInfo, setRestaurantInfo] = useState(null);
   const [recommendedItems, setRecommendedItems] = useState(null);
   const [categoryHeading, setCategoryHeading] = useState("");
+  const [categories, setCategories] = useState(null);
 
   useEffect(() => {
     fetchRestaurantInfo();
@@ -25,7 +27,7 @@ export default function RestaurantMenu() {
     const allCategories = restaurantDetails?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
     const categories = allCategories.filter(category => category?.card?.card?.["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-    console.log(categories);
+    setCategories(categories);
 
     if (!recommendedItems) {
       recommendedItems = restaurantDetails?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards;
@@ -43,6 +45,8 @@ export default function RestaurantMenu() {
     setCategoryHeading(categoryHeading);
     setRecommendedItems(recommendedItems);
   }
+
+  console.log(categories);
 
   if (restaurantDetails === null) return <Shimmer />;
 
@@ -76,10 +80,15 @@ export default function RestaurantMenu() {
       </div>
 
       <div className="w-[800px] m-auto px-4 pt-4">
-        <h1 className="categoryHeading font-bold text-xl text-blue-800 pb-2">{categoryHeading} ({recommendedItems.length})</h1>
-        {
+        {/* <h1 className="categoryHeading font-bold text-xl text-blue-800 pb-2">{categoryHeading} ({recommendedItems.length})</h1> */}
+        {/* {
           recommendedItems.map((item) => (
             <Dish key={item.card.info.id} item={item.card.info} />
+          ))
+        } */}
+        {
+          categories.map((category, index) => (
+            <CategoryAccordion key={index} category={category} />
           ))
         }
       </div>
