@@ -53,7 +53,7 @@
     <p>Welcome, {username}!</p>
   ```
 
-- To provide a context for a root component or any other component, you can use below code. When you change values of this context, the value will be updated wherever it is being used inside that <App /> component
+- To provide a context for a root component or any other component, you can use below code. When you change values of this context, the value will be updated wherever it is being used inside that `<App />` component
 
   ```
     <UserContext.Provider value={{username: "Guest"}}>
@@ -64,6 +64,6 @@
 - To retrieve values from UserContext
   ```
     <UserContext.Consumer>
-        { ( {username} ) => <p>Welcome, {username}!</p> }
+        { ({username}) => <p>Welcome, {username}!</p> }
     </UserContext.Consumer>
   ```
